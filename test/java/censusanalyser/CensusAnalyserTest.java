@@ -32,12 +32,10 @@ public class CensusAnalyserTest {
 
     @Test
     public void givenIndiaStateCSV_ShouldReturnExactCount()  {
-
         try {
             CensusAnalyser censusAnalyser = new CensusAnalyser();
             int numOfStateCode = censusAnalyser.loadIndianStateCode(INDIA_STATE_CSV_FILE_PATH);
             Assert.assertEquals(37,numOfStateCode);
         } catch (CensusAnalyserException e) {}
-
     }
 }
