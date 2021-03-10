@@ -32,7 +32,11 @@ public class CensusAnalyser {
 
     public int loadIndiaCensusData(String csvFilePath) throws CensusAnalyserException {
 <<<<<<< HEAD
+<<<<<<< HEAD
         try(Reader reader = Files.newBufferedReader(Paths.get(csvFilePath));
+=======
+        try (Reader reader = Files.newBufferedReader(Paths.get(csvFilePath));
+>>>>>>> UseCase-2
 =======
         try (Reader reader = Files.newBufferedReader(Paths.get(csvFilePath));
 >>>>>>> UseCase-2
@@ -44,6 +48,7 @@ public class CensusAnalyser {
             Iterator<IndiaCensusCSV> censusCSVIterator = csvToBean.iterator();
             Iterable<IndiaCensusCSV> csvIterable = () -> censusCSVIterator;
 <<<<<<< HEAD
+<<<<<<< HEAD
             int numOfEnteries = (int) StreamSupport.stream(csvIterable.spliterator(),false).count();
             return numOfEnteries;
         } catch (IOException e) {
@@ -53,6 +58,8 @@ public class CensusAnalyser {
             throw new CensusAnalyserException(e.getMessage(),
                                               CensusAnalyserException.ExceptionType.UNABLE_TO_PARSE);
 =======
+=======
+>>>>>>> UseCase-2
             int numOfEnteries = (int) StreamSupport.stream(csvIterable.spliterator(), false).count();
             return numOfEnteries;
         } catch (IOException e) {
@@ -61,6 +68,9 @@ public class CensusAnalyser {
         } catch (IllegalStateException e) {
             throw new CensusAnalyserException(e.getMessage(),
                     CensusAnalyserException.ExceptionType.UNABLE_TO_PARSE);
+<<<<<<< HEAD
+>>>>>>> UseCase-2
+=======
 >>>>>>> UseCase-2
         }
     }
